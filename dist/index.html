@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <style>
+      .frog {
+        fill: lightblue;
+        position: relative;
+        z-index: 10;
+      }
+
+
+      .hidden {
+        visibility: hidden;
+        z-index: 999;
+      }
+
+      .log {
+        fill: rgb(119, 67, 0);
+        position: relative;
+        z-index: -999;
+      }
+      .gameover {
+        font-family: sans-serif;
+        font-size: 80px;
+        fill: red;
+      }
+
+      .key {
+        width: 18px;
+        text-align: center;
+        border-radius: 3px;
+        background-color: lightgray;
+      }
+      .highlight {
+        background-color: pink;
+      }
+      div#controls {
+        float: right;
+        margin: 50px;
+      }
+    </style>
+  <script defer src="main.js"></script></head>
+  <body>
+    <script src="/bundle.js"></script>
+    <svg
+      id="svgCanvas"
+      width="600"
+      height="600"
+      style="background-color: rgb(100, 181, 219)"
+    >
+      <g id="inArea">
+        <circle
+          class="target hidden"
+          id="inArea1"
+          cx="80"
+          cy="30"
+          r="20"
+          fill="green"
+        ></circle>
+        <circle
+          class="target hidden"
+          id="inArea2"
+          cx="240"
+          cy="30"
+          r="20"
+          fill="green"
+        ></circle>
+        <circle
+          class="target hidden"
+          id="inArea3"
+          cx="400"
+          cy="30"
+          r="20"
+          fill="green"
+        ></circle>
+        <circle
+          class="target hidden"
+          id="inArea4"
+          cx="560"
+          cy="30"
+          r="20"
+          fill="green"
+        ></circle>
+      </g>
+      <rect width="600" y="540" height="60" style="fill: rgb(156, 13, 199)" />
+      <rect width="600" y="300" height="60" style="fill: rgb(156, 13, 199)" />
+
+      <rect id="road" width="600" y="360" height="180" fill="black" />
+      <rect width="40" y="0" x="0" height="50" style="fill: rgb(1, 242, 74)" />
+      <rect
+        width="80"
+        y="0"
+        x="120"
+        height="50"
+        style="fill: rgb(1, 242, 74)"
+      />
+      <rect
+        width="80"
+        y="0"
+        x="280"
+        height="50"
+        style="fill: rgb(1, 242, 74)"
+      />
+      <rect
+        width="80"
+        y="0"
+        x="440"
+        height="50"
+        style="fill: rgb(1, 242, 74)"
+      />
+      <rect width="600" y="0" height="10" style="fill: rgb(1, 242, 74)" />
+
+      <circle
+        id="frog"
+        r="20"
+        cx="300"
+        cy="570"
+        style="fill: rgb(41, 162, 105)"
+      />
+    </svg>
+    <div id="controls">
+      <p>Lives: <span id="lives">0</span></p>
+      <p>High Score: <span id="highscore">0</span></p>
+      <p>Score: <span id="score">0</span></p>
+      <h2>Controls:</h2>
+      <table>
+
+        <tr>
+          <td>Move Left</td>
+          <td><div id="ArrowLeft" class="key">&#8678;</div></td>
+        </tr>
+        <tr>
+          <td>Move Right</td>
+          <td><div id="ArrowRight" class="key">&#8680;</div></td>
+        </tr>
+        <tr>
+          <td>Move Up</td>
+          <td><div id="ArrowUp" class="key">&#8679;</div></td>
+        </tr>
+        <tr>
+          <td>Move Down</td>
+          <td><div id="ArrowDown" class="key">&#8681;</div></td>
+        </tr>
+
+      </table>
+    </div>
+  </body>
+</html>
