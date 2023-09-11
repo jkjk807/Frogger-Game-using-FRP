@@ -1,6 +1,6 @@
-# FIT2102 Assignment 1
+# Frogger Game Using Functional Reactive Programming
 
-All of your changes, code, and game files should be in the src folder.
+Recreated the popular Frogger game using functional reactive programming style in TypeScript
 
 ## Development
 
